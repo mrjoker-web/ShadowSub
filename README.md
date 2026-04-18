@@ -41,3 +41,35 @@ Facilitar a fase de **reconhecimento (recon)** em testes de segurança, sendo id
 git clone https://github.com/mrjoker-web/ShadowSub.git
 cd ShadowSub
 pip install requests
+
+▶️ Como usar
+
+python shadowsub.py -t example.com -w wordlist.txt
+
+Com threads personalizadas:
+
+python shadowsub.py -t example.com -w wordlist.txt --threads 100
+
+📄 Wordlist
+Cria um ficheiro wordlist.txt com subdomínios comuns:
+
+www
+mail
+ftp
+admin
+test
+dev
+api
+beta
+staging
+portal
+
+
+📸 Exemplo de Output
+
+[FOUND] http://admin.example.com (192.168.1.1)
+[FOUND] https://api.example.com (192.168.1.2)
+
+[##############################] 100.0%
+
+[+] Output guardado em subdomains.txt e subdomains.json
